@@ -9,7 +9,6 @@ html {
 }
 
 .date {
-    //color: transparent;
     font: 400 0.875rem/2.25rem "P T Sans";
     color: #b0b0b0;
     padding-right: 5px;
@@ -65,77 +64,42 @@ html {
     border-radius: 0;
     .navbar-collapse-blog {
         background: #ffffff;
-        #search {
-            float: left;
-            margin-top: 9px;
-            width: 250px;
-        }
-
-        .search {
-            padding: 5px 0;
-            width: 230px;
-            height: 30px;
-            position: relative;
-            left: 10px;
-            float: left;
-            line-height: 22px;
-        }
-
-        .search input {
-            position: relative;
-            width: 0;
-            float: Left;
-            margin-left: 0;
-            -webkit-transition: all 0.7s ease-in-out;
-            -moz-transition: all 0.7s ease-in-out;
-            -o-transition: all 0.7s ease-in-out;
-            transition: all 0.7s ease-in-out;
-            height: 30px;
-            line-height: 18px;
-            padding: 0 2px 0 2px;
-            border-radius: 1px;
-        }
-
-        .search:hover input, .search input:focus {
-            width: 150px;
-            margin-left: 60px;
-        }
-
-        .btn {
-            height: 30px;
-            position: relative;
-            left: 0;
-            top: 5px;
-            background-color: #f6f6f6;
-            padding: 28px 19px;
-            border-radius: 0;
-            border: none;
-            i {
-                opacity: 0.37;
-            }
-        }
-
         .navbar-left {
             margin-top: 0;
             margin-bottom: 0;
             padding: 0;
+            .search{
+                .btn {
+                    right: 0;
+                    top: 0;
+                    left: 0;
+                    background-color: #f6f6f6;
+                    padding: 11px 19px;
+                    border: 1px solid #b2b2b2;
+                    //border: none;
+                    i {
+                        opacity: 0.37;
+                        color: grey;
+                    }
+                }
+                .input-sm{
+                    display: inline-block;
+                    width: 78%;
+                    padding: 24px 19px;
+                    margin-left: 0;
+                }
+            }
         }
         .navbar-nav-blog {
             .nav-center {
                 color: #b2b2b2;
                 font: 400 2.125rem/2.25rem "P T Sans";
-                a {
-                    // padding-top:28px;
-                    // padding-bottom: 25px;
-                }
             }
         }
         .navbar-right-blog {
-            //width: 462px;
             font: 400 2.125rem/2rem "P T Sans";
             li {
                 a {
-                    //padding: 28px 13px 25px 25px;
                     color: #1a54e7;
 
                 }
@@ -342,6 +306,8 @@ html {
     }
 }
 
+
+
 @media (min-width: 768px) and (max-width: 991px) {
     html {
         font-size: 13px;
@@ -352,18 +318,44 @@ html {
     }
     .navbar-default-blog {
         .navbar-collapse-blog {
+            .navbar-left{
+                .search{
+                    .btn {
+                        right: 0;
+                        top: 0;
+                        left: 0;
+                        background-color: #f6f6f6;
+                        padding: 28px 19px;
+                        border-radius: 0;
+                        border: none;
+                        i {
+                            opacity: 0.37;
+                            color: grey;
+                        }
+                    }
+                    .input-sm{
+                        display: inline-block;
+                        padding: 38px 19px;
+                        width: 58%;
+                    }
+                }
+            }
             .navbar-left {
             }
             .navbar-nav-blog {
                 .nav-center {
                     font: 400 1.8rem/2.25rem "P T Sans";
-                    //padding-left: 80px;
+                    a{
+                        padding: 28px 5px;
+                    }
                 }
             }
             .navbar-right-blog {
-                //width: 462px;
                 font: 400 1.8rem/2.25rem "P T Sans";
                 li {
+                    a{
+                        padding: 28px 20px;
+                    }
                 }
             }
         }
@@ -384,7 +376,6 @@ html {
         .section-prew {
             bottom: 42%;
         }
-
     }
     .section-welcome {
         .carousel-inner-blog {
@@ -418,9 +409,11 @@ html {
             }
         }
     }
-    .section-content{
-        .date-bg-content {
-            right: 3%;
+    .e-maile {
+        .form-mail-blog {
+            .form-control-blog {
+                padding: 22px;
+            }
         }
     }
 }
@@ -432,22 +425,77 @@ html {
     .navbar-default-blog {
         .navbar-collapse-blog {
             .navbar-left {
+                .search {
+                    background: #FFFFFF;
+                    padding: 5px 0;
+                    width: 60px;
+                    height: 30px;
+                    position: relative;
+                    left: 0;
+                    line-height: 22px;
+                    -webkit-transition: all 0.7s ease-in-out;
+                    -moz-transition: all 0.7s ease-in-out;
+                    -o-transition: all 0.7s ease-in-out;
+                    transition: all 0.7s ease-in-out;
+                    &:hover {
+                        input, input:focus {
+                            width: 170px;
+                            margin-left: 60px;
+                            padding: 38px;
+                        }
+                    }
+                    input {
+                        border: 1px solid #cdcdcd;
+                        z-index: 50;
+                        position: absolute;
+                        width: 0;
+                        top: 0;
+                        float: Left;
+                        margin-left: 53px;
+                        -webkit-transition: all 0.7s ease-in-out;
+                        -moz-transition: all 0.7s ease-in-out;
+                        -o-transition: all 0.7s ease-in-out;
+                        transition: all 0.7s ease-in-out;
+                        height: 30px;
+                        line-height: 18px;
+                        padding: 40px 2px;
+                        border-radius: 1px;
+                        background: #ffffff;
+                    }
+                }
+
+
+                .btn {
+                    z-index: 100;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    left: 0;
+                    background-color: #f6f6f6;
+                    padding: 28px 19px;
+                    border-radius: 0;
+                    border: none;
+                    i {
+                        opacity: 0.37;
+                        color: grey;
+                        padding: 16.5px 3px;
+                    }
+                }
             }
             .navbar-nav-blog {
                 .nav-center {
                     font: 400 1.125rem/2.25rem "P T Sans";
                     a {
-                        padding-top: 28px;
-                        padding-bottom: 25px;
+                        padding: 28px 11px;
+
                     }
                 }
             }
             .navbar-right-blog {
-                //width: 462px;
                 font: 400 1.125rem/2.25rem "P T Sans";
                 li {
                     a {
-                        padding: 28px 13px 25px 25px;
+                        padding: 28px 10px;
 
                     }
                 }
@@ -485,15 +533,95 @@ html {
         font: 700 1.125rem/2.25rem "P T Sans";
         bottom: 38%;
     }
+    .section-content{
+        .date-bg-content {
+            right: 2%;
+        }
+    }
+    .section-top-prew,
+    .section-bottom-prew {
+        .section-prew {
+            bottom: 35%;
+        }
+    }
+    .e-maile {
+        .form-mail-blog {
+            .form-control-blog {
+                padding: 23px;
+            }
+        }
+    }
 }
 
-@media (min-width: 1200px) and (max-width: 1969px) {
+@media (min-width: 1200px) and (max-width: 1999px) {
     html {
         font-size: 16px;
     }
     .navbar-default-blog {
         .navbar-collapse-blog {
             .navbar-left {
+                .search {
+                    background: #FFFFFF;
+                    padding: 5px 0;
+                    width: 60px;
+                    height: 30px;
+                    position: relative;
+                    left: 0;
+                    //float: left;
+                    line-height: 22px;
+                    -webkit-transition: all 0.7s ease-in-out;
+                    -moz-transition: all 0.7s ease-in-out;
+                    -o-transition: all 0.7s ease-in-out;
+                    transition: all 0.7s ease-in-out;
+                    &:hover {
+
+                        //width: 230px;
+                        input, input:focus {
+                            width: 170px;
+                            margin-left: 60px;
+                            padding: 40px;
+                        }
+
+                    }
+
+                    input {
+                        border: 1px solid #cdcdcd;
+                        z-index: 50;
+                        position: absolute;
+                        width: 0;
+                        top: 0;
+                        float: Left;
+                        margin-left: 53px;
+                        -webkit-transition: all 0.7s ease-in-out;
+                        -moz-transition: all 0.7s ease-in-out;
+                        -o-transition: all 0.7s ease-in-out;
+                        transition: all 0.7s ease-in-out;
+                        height: 30px;
+                        line-height: 18px;
+                        padding: 40px 2px;
+                        border-radius: 1px;
+                        background: #ffffff;
+                        //padding: 28px;
+                    }
+                }
+
+
+                .btn {
+                    z-index: 100;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    left: 0;
+                    background-color: #f6f6f6;
+                    padding: 28px 19px;
+                    border-radius: 0;
+                    border: none;
+                    i {
+                        opacity: 0.37;
+                        color: grey;
+                        padding: 17px 3px;
+                    }
+                }
             }
             .navbar-nav-blog {
                 .nav-center {
@@ -505,7 +633,6 @@ html {
                 }
             }
             .navbar-right-blog {
-                //width: 462px;
                 font: 400 1.125rem/2.25rem "P T Sans";
                 li {
                     a {
@@ -529,23 +656,46 @@ html {
                 color: white;
             }
         }
-    }
-    .section-welcome {
-        .item-caption-blog {
-            position: absolute;
-            top: 0;
-            .text-welcome {
-                color: white;
-                font: 400 3rem/3.75rem "P T Serif";
-                span {
-                    display: block;
-                }
+        .section-content{
+            .date-bg-content {
+                right: 2%;
+            }
+        }
+        .section-top-prew,
+        .section-bottom-prew {
+            .section-prew {
+                bottom: 35%;
             }
         }
     }
+    .section-welcome {
+        .carousel-inner-blog{
+            .item-blog{
+                .item-caption-blog {
+                    top:20%;
+                    .text-welcome {
+                        color: white;
+                        font: 400 3rem/3.75rem "P T Serif";
+                        span {
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
     .section {
         font: 700 1.125rem/2.25rem "P T Sans";
         bottom: 38%;
+    }
+    .e-maile {
+        .form-mail-blog {
+            .form-control-blog {
+                padding: 25px;
+            }
+        }
     }
 }
 
@@ -555,6 +705,72 @@ html {
     }
     .navbar-default-blog {
         .navbar-collapse-blog {
+            #search {
+                float: left;
+                margin-top: 9px;
+                width: 250px;
+            }
+
+
+            .search {
+                background: #FFFFFF;
+                padding: 5px 0;
+                width: 60px;
+                height: 30px;
+                position: relative;
+                left: 0;
+                //float: left;
+                line-height: 22px;
+                -webkit-transition: all 0.7s ease-in-out;
+                -moz-transition: all 0.7s ease-in-out;
+                -o-transition: all 0.7s ease-in-out;
+                transition: all 0.7s ease-in-out;
+                &:hover {
+
+                    //width: 230px;
+                    input, input:focus {
+                        width: 170px;
+                        margin-left: 60px;
+                    }
+
+                }
+
+                input {
+                    border: 1px solid #cdcdcd;
+                    z-index: 50;
+                    position: absolute;
+                    width: 0;
+                    top: 0;
+                    float: Left;
+                    margin-left: 53px;
+                    -webkit-transition: all 0.7s ease-in-out;
+                    -moz-transition: all 0.7s ease-in-out;
+                    -o-transition: all 0.7s ease-in-out;
+                    transition: all 0.7s ease-in-out;
+                    height: 30px;
+                    line-height: 18px;
+                    padding: 40px 2px;
+                    border-radius: 1px;
+                    background: #ffffff;
+                }
+            }
+
+
+            .btn {
+                z-index: 100;
+                position: absolute;
+                right: 0;
+                top: 0;
+                left: 0;
+                background-color: #f6f6f6;
+                padding: 28px 19px;
+                border-radius: 0;
+                border: none;
+                i {
+                    opacity: 0.37;
+                    color: grey;
+                }
+            }
             .navbar-left {
             }
             .navbar-nav-blog {
@@ -619,5 +835,44 @@ html {
             font: 400 1.125rem/1.875rem "P T Serif";
             display: block;
         }
+    }
+    .section-welcome {
+        .carousel-inner-blog {
+            .item-blog {
+                .item-caption-blog {
+                    top: 20%;
+                    .text-welcome {
+                        color: white;
+                        font: 400 3rem/3.75rem "P T Serif";
+                        span {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .section-content{
+        padding-top: 46px;
+        padding-bottom: 92px;
+    }
+    .section-top-prew,
+    .section-bottom-prew {
+        padding-top: 67px;
+        padding-bottom: 57px;
+    }
+    .e-maile {
+        padding-top: 102px;
+        padding-bottom: 160px;
+        .form-mail-blog {
+            padding-top: 48px;
+            .form-control-blog {
+                padding: 25px;
+            }
+        }
+    }
+    #footer{
+        padding-top: 81px;
+        padding-bottom: 203px;
     }
 }
